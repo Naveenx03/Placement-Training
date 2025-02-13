@@ -1,4 +1,4 @@
-public class Main
+public class Non_short_circuin
 {
 	public static void main(String[] args) {
 		int a = 100;
