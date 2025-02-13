@@ -1,4 +1,4 @@
-public class Main
+public class Operator
 {
 	public static void main(String[] args) {
 		byte num1 = 100;
