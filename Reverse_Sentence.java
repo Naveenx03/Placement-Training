@@ -1,11 +1,11 @@
-class Reverse_Sentence{
+class Sentence_Reverse{
     public static void main (String[] args) {
-        String s="I love Java     Programming";
+        String s="I                   love Java     Programming";
         int n=s.length()-1;
         String str="";
         for(int i=n;i>=0;i--)
         {
-            if(Character.isLetter(s.charAt(i))){
+            if(s.charAt(i)!=' '){
                 str=str+s.charAt(i);
                 if(i==0){
                 StringBuilder sb=new StringBuilder(str);
