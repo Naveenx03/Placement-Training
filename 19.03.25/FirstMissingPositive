@@ -1,0 +1,52 @@
+import java.util.HashSet;
+
+public class Problem41 {
+
+	public static void main(String[] args) {
+		
+		//Approach 1 - time limit exceeded but working
+		
+		int[] nums = {1};
+		
+		int n = nums.length;
+		
+		boolean isthere = false;
+
+		for(int i=1;i<=Integer.MAX_VALUE;i++) {
+			
+			for(int j=0;j<nums.length;j++) {
+				
+			
+				if(nums[j] == i) {
+					isthere = true;
+					break;
+				}
+				else {
+					isthere = false;
+				}
+			}
+			if(isthere == false) {
+				System.out.println(i);
+				break;
+			}
+
+		}
+		
+		// Approach 2 - set contains - working
+		
+		HashSet<Integer> set = new HashSet<>();
+		
+		for (int num : nums) {
+            set.add(num);
+        }
+		
+		for (int i = 1; i <= nums.length+1; i++) {
+            if (!set.contains(i)) {
+                System.out.println(i);
+                break;
+            }
+        }
+		
+	}
+
+}
